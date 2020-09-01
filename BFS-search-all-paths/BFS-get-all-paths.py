@@ -1,9 +1,9 @@
 
 
-col0 = [-1, 3, 2, -1]
-col1 = [0, -1, 5, 2]
-col2 = [0, 0, -1, 3]
-col3 = [-1, 0, 0, -1]
+col0 = [-1,  3,  2, -1]
+col1 = [-1, -1,  5,  2]
+col2 = [-1, -1, -1,  3]
+col3 = [-1, -1, -1, -1]
 
 
 graph = [col0, col1, col2, col3]
@@ -13,10 +13,9 @@ paths_all = []
 
 
 def getpathsbfs(graph, start, end):
-	nodes = len(graph)
     queue = []
     queue.append([start])
-    visited = [-1] * nodes
+    visited = [-1] * len(graph)
     while queue:
         path = queue.pop(0)
         currentnode = path[-1]
@@ -32,4 +31,4 @@ def getpathsbfs(graph, start, end):
     return paths_all
 
 
- print(getpathsbfs(graph, 0, 3))
+print(getpathsbfs(graph, 0, 3))
