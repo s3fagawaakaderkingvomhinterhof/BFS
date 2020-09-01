@@ -12,7 +12,7 @@ col3 = [-1, -1, -1, -1]
 graph = [col0, col1, col2, col3]
 
 
-def getpathsbfs(graph, start, end):
+def getpathsbfs(graph, start):
     queue = []
     queue.append([start])
     visited = [-1] * len(graph)
@@ -35,4 +35,4 @@ def getpathsbfs(graph, start, end):
     return d
 
 
-print(getpathsbfs(graph, 0, 3))
+print(getpathsbfs(graph, 0))
